@@ -6,7 +6,7 @@ import ErrorPage from './components/Error/Errorpage'
 import Dashboard from './components/dashboard/Dashboard'
 import Customers from './components/dashboard/Customers'
 import Products from './components/dashboard/Products'
-import Sales from './components/dashboard/Sales'
+import Sales from './components/dashboard/Orders'
 
 
 function App() {
