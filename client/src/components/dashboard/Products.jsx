@@ -8,6 +8,8 @@ const Products = () => {
     const headline = ["Sl. No", "Product Name", "Description", "Quantity", "Price", "Action"]
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [products, setProducts] = useState([]);
+    var currentPage = 1
+    var totalPages = 1
 
     const token = localStorage.getItem("token");
 
@@ -87,8 +89,22 @@ const Products = () => {
                                 ))}
                             </tbody>
                         </table>
+                        <div className="flex justify-end mt-4 gap-2">
+                            <button
+                                disabled={currentPage === 1}
+                                className="px-4 py-1 bg-gray-300 rounded hover:bg-gray-400 disabled:opacity-50"
+                            >
+                                Prev
+                            </button>
+                            <span className="px-2 py-1">{currentPage} / {totalPages}</span>
+                            <button
+                                disabled={currentPage === totalPages}
+                                className="px-4 py-1 bg-gray-300 rounded hover:bg-gray-400 disabled:opacity-50"
+                            >
+                                Next
+                            </button>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
